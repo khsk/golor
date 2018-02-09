@@ -30,6 +30,6 @@ $fortune | cowsay | golor aurora
                 ||     ||
 ```
 
-![Screenshot](https://imgur.com/pFj6W62 "Screenshot")
+![Screenshot](https://user-images.githubusercontent.com/10125386/36017805-9e80736e-0dbc-11e8-87be-69522e5d3677.png)
 
 
