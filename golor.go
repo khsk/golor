@@ -8,6 +8,7 @@ import (
 	"math"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -187,17 +188,13 @@ func getVisualDistinction(c *cli.Context) string {
 }
 
 func getText(c *cli.Context) string {
-	println("getText")
 	if !terminal.IsTerminal(0) {
-		println("pipe")
 		b, _ := ioutil.ReadAll(os.Stdin)
 		return string(b)
 	}
-	println("not pipe")
 	if c.GlobalString("file") != "" {
-		println("file")
 		b, _ := ioutil.ReadFile(c.GlobalString("file"))
 		return string(b)
 	}
-	return ""
+	return strings.Join(c.Args(), "\n")
 }
