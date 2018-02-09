@@ -87,9 +87,16 @@ func main() {
 		},
 	}
 
-	app.Action = func(c *cli.Context) {}
-
+	app.Action = Action
 	app.Run(os.Args)
+}
+
+func Action(c *cli.Context) {
+	text := getText(c)
+	if terminal.IsTerminal(0) && c.NArg() == 0 && text == "" {
+		cli.ShowAppHelpAndExit(c, 1)
+	}
+	fmt.Print(rainbow(text, c))
 }
 
 func rainbowAction(c *cli.Context) {
