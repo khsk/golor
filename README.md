@@ -35,7 +35,7 @@ $fortune | cowsay | golor aurora
 
 # Install
 
-`go -get -u github.com/khsk/golor`
+`go get -u github.com/khsk/golor`
 
 or you can download binary https://github.com/khsk/golor/releases
 
