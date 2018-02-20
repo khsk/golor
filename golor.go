@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/codegangsta/cli"
+	"github.com/urfave/cli"
 	"golang.org/x/crypto/ssh/terminal"
 	"io/ioutil"
 	"math"
